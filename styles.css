@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    @apply transition-colors;
+  }
+  .transition-colors-custom{
+    transition-property: color;
+    transition-duration: 0ms;
+  }
+  
