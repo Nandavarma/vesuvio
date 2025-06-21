@@ -75,12 +75,12 @@ vesuvio/
 ├── .env                         # Environment variables
 ├── package.json
 └── README.md
-🛠️ Local Setup
-Requires Node.js ≥ 16 and npm
+```
+## 🛠️ Local Setup
 
-bash
-Copy
-Edit
+> Requires **Node.js ≥ 16** and **npm**
+
+```bash
 # 1. Clone the repository
 git clone https://github.com/Nandavarma/vesuvio.git
 cd vesuvio
@@ -95,10 +95,10 @@ npm install
 
 # 4. Start development server
 npm run dev
-Once started, visit http://localhost:5173 to view the app locally.
 
-🖼️ Screenshots
-📸 You can replace these placeholder links with actual screenshots
+```
+## 🖼️ Screenshots
+
 
 Home Page	Restaurant Details	Order Confirmation
 
