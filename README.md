@@ -36,9 +36,6 @@
 All data is fetched from your own hosted backend:
 https://vesuvio-server.onrender.com/api/
 
-yaml
-Copy
-Edit
 
 > The backend only allows requests from the deployed frontend domain for security.
 
@@ -90,11 +87,11 @@ npm install
 
 # 3. Add your Supabase credentials to a `.env` file
 # Example:
-# VITE_SUPABASE_URL=your-url
-# VITE_SUPABASE_ANON_KEY=your-key
+# PARCEL_SUPABASE_URL=your-url
+# PARCEL_SUPABASE_ANON_KEY=your-key
 
 # 4. Start development server
-npm run dev
+npm start
 
 ```
 ## 🖼️ Screenshots
