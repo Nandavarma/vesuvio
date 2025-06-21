@@ -1,186 +1,111 @@
-Here are two tailored **README files** — one for your **frontend** repo (`vesuvio`) and a shorter one for your **backend** (`vesuvio-server`). Each is optimized for clarity, presentation, and usefulness on GitHub.
+# 🍕 Vesuvio — A Modern Food Ordering Web App
 
----
+**Vesuvio** is a sleek, fully responsive food ordering platform built with React and Tailwind CSS. Users can explore restaurants, filter based on preferences, manage a cart, and place mock orders — all integrated with real-time data from a custom-built backend.
 
-## ✅ README for `vesuvio` (Frontend Repository)
-
-```markdown
-# Vesuvio 🍕 — Modern Food Ordering Web App
-
-Vesuvio is a sleek and responsive food ordering web application built with **React**, **Tailwind CSS**, **Framer Motion**, and **Redux Toolkit**. It offers an immersive user experience with restaurant listings, search filters, cart management, and authentication — all powered by real-time data from a custom backend API.
-
-🔗 **Live Site**: [https://vesuvio-in.vercel.app](https://vesuvio-in.vercel.app)
-
----
-
-## 🧠 Tech Stack
-
-- ⚛️ React (Functional Components + Hooks)
-- 💅 Tailwind CSS
-- 🌙 Dark Mode Support
-- 🚀 Redux Toolkit (State Management)
-- 🔐 Supabase Auth
-- 🌐 Framer Motion (Animations)
-- 🍽 Custom Backend API ([vesuvio-server](https://github.com/Nandavarma/vesuvio-server))
-
----
-
-## 📡 Backend API Integration
-
-All restaurant data, order actions, and logic are fetched from a custom-built API hosted at:
-
-```
-
-[https://vesuvio-server.onrender.com/api/](https://vesuvio-server.onrender.com/api/)
-
-````
-
-This server only accepts requests from the deployed frontend domain for security.
-
----
-
-## 📁 Folder Structure
-
-```plaintext
-vesuvio/
-├── public/
-│   └── index.html              # Main HTML shell
-├── src/
-│   ├── assets/                 # Images & icons
-│   ├── components/            # All UI components
-│   │   ├── Header.jsx
-│   │   ├── Sidebar.jsx
-│   │   ├── PlaylistCard.jsx
-│   │   └── ...
-│   ├── pages/                 # Route-based page components
-│   │   ├── Mainbody.jsx
-│   │   ├── About.jsx
-│   │   └── Contact.jsx
-│   ├── utils/                 # Custom hooks, Redux, Supabase client
-│   │   ├── useRestaurants.js
-│   │   ├── darkModeContext.js
-│   │   └── Redux utils/
-│   │       └── authSlice.js
-│   ├── App.js                 # Main app layout and routing
-│   ├── index.js               # React DOM render entry
-│   └── tailwind.config.js     # Tailwind customization
-├── .env                       # Environment variables (Supabase keys)
-├── package.json
-└── README.md                  # You're here!
-````
-
----
-
-## 📸 Screenshots
-
-> Replace these below with real images later
-
-| Home Page                       | Restaurant Details                    | Order Success Modal               |
-| ------------------------------- | ------------------------------------- | --------------------------------- |
-| ![Home](./screenshots/home.png) | ![Details](./screenshots/details.png) | ![Order](./screenshots/order.png) |
-
----
-
-## 🛠 Local Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/Nandavarma/vesuvio.git
-cd vesuvio
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-> Ensure your `.env` file includes Supabase credentials
-
----
-
-## 📬 Contact
-
-For suggestions or collaborations:
-📧 **[nandavarma84@gmail.com](mailto:nandavarma84@gmail.com)**
-
----
-
-## ⭐️ Star the Project
-
-If you like the project, consider giving it a ⭐️ to support the development!
-
-````
-
----
-
-## ✅ README for `vesuvio-server` (Backend Repository)
-
-```markdown
-# Vesuvio Server 🍽️ — Backend API
-
-This is the backend API that powers the Vesuvio food ordering app.
-
-🔗 **Frontend App**: [https://vesuvio-in.vercel.app](https://vesuvio-in.vercel.app)
-
----
-
-## 📡 API Base URL
-
-````
-
-[https://vesuvio-server.onrender.com/api/](https://vesuvio-server.onrender.com/api/)
-
-```
-
----
-
-## 🔐 CORS Policy
-
-This server **only allows requests from**:
-
-```
-
-[https://vesuvio-in.vercel.app](https://vesuvio-in.vercel.app)
-
-````
-
-If you attempt to fetch from another origin, the request will be blocked by CORS.
+> Live Project: [https://vesuvio-in.vercel.app](https://vesuvio-in.vercel.app)
 
 ---
 
 ## 🚀 Features
 
-- RESTful API with Express.js
-- Serves restaurant data and menus
-- Deployed on Render
+- 🔍 Live restaurant search
+- ✅ Filters: Veg-only & 4+ ratings
+- 🛒 Smart cart management
+- ✨ Framer Motion animations
+- 🌙 Full dark/light mode support
+- 🔐 Supabase login/register
+- ⚙️ Redux Toolkit for state management
+- 📡 Fetches data from your custom backend API
 
 ---
 
-## 🛠 Local Setup
+## 🧠 Tech Stack
 
-```bash
-git clone https://github.com/Nandavarma/vesuvio-server.git
-cd vesuvio-server
+- **React** + **Vite**
+- **Tailwind CSS**
+- **Redux Toolkit**
+- **Framer Motion**
+- **React Router**
+- **Supabase Auth**
+- **Custom Node.js/Express API** ([Backend Repo](https://github.com/Nandavarma/vesuvio-server))
 
+---
+
+## 📡 Backend API
+
+All data is fetched from your own hosted backend:
+https://vesuvio-server.onrender.com/api/
+
+yaml
+Copy
+Edit
+
+> The backend only allows requests from the deployed frontend domain for security.
+
+---
+
+## 📦 Folder Structure
+
+```plaintext
+vesuvio/
+├── public/
+│   └── index.html               # HTML shell
+├── src/
+│   ├── assets/                  # Images & logos
+│   ├── components/              # Reusable UI components
+│   │   ├── Header.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── PlaylistCard.jsx
+│   │   ├── LoginRegister.jsx
+│   │   └── ...
+│   ├── pages/                   # Page-level routes
+│   │   ├── Mainbody.jsx
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
+│   ├── utils/                   # Hooks, contexts, Redux logic
+│   │   ├── useRestaurants.js
+│   │   ├── useOnlineStatus.js
+│   │   ├── darkModeContext.js
+│   │   └── Redux utils/
+│   │       ├── authSlice.js
+│   │       └── cartSlice.js
+│   ├── App.js                   # Main route manager
+│   ├── index.js                 # Entry point
+│   └── tailwind.config.js       # Tailwind config
+├── .env                         # Environment variables
+├── package.json
+└── README.md
+🛠️ Local Setup
+Requires Node.js ≥ 16 and npm
+
+bash
+Copy
+Edit
+# 1. Clone the repository
+git clone https://github.com/Nandavarma/vesuvio.git
+cd vesuvio
+
+# 2. Install dependencies
 npm install
+
+# 3. Add your Supabase credentials to a `.env` file
+# Example:
+# VITE_SUPABASE_URL=your-url
+# VITE_SUPABASE_ANON_KEY=your-key
+
+# 4. Start development server
 npm run dev
-````
+Once started, visit http://localhost:5173 to view the app locally.
 
----
+🖼️ Screenshots
+📸 You can replace these placeholder links with actual screenshots
 
-## 📬 Contact
+Home Page	Restaurant Details	Order Confirmation
 
-📧 **[nandavarma84@gmail.com](mailto:nandavarma84@gmail.com)**
+📬 Contact
+If you have feedback, suggestions, or want to collaborate:
 
-```
+📧 nandavarma84@gmail.com
 
----
-
-Would you like me to:
-- Generate a Markdown `screenshots/` section with placeholders?
-- Add badges (e.g. Vercel, Render, License)?
-- Format both for NPM/Yarn commands or Docker support?
-
-Let me know and I can polish it further.
-```
+🌟 Like the Project?
+Give it a ⭐️ on GitHub if you found it helpful!
