@@ -34,16 +34,17 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full px-4 py-3 flex justify-between items-center bg-transparent dark:bg-slate-700 dark:text-gray-200 shadow-md relative">
+    <header className="w-full px-4 py-2 sm:py-3 flex justify-between items-center bg-transparent dark:bg-slate-700 dark:text-gray-200 shadow-md relative">
+      {/* Logo */}
       <Link
         to="/"
-        className="text-4xl font-extrabold tracking-wider ml-2 sm:ml-5"
+        className="text-3xl sm:text-4xl font-extrabold tracking-wider ml-1 sm:ml-5"
       >
         VESUVIO
       </Link>
 
-      <div className="flex items-center gap-4 sm:gap-6 text-md font-semibold">
-        {/* Cart Icon */}
+      <div className="flex items-center gap-3 sm:gap-5 text-sm sm:text-md font-semibold">
+        {/* Cart */}
         <Link to="/cart" className="relative hover:text-orange-500 transition">
           <BsCartDashFill className="text-2xl" />
           <span className="absolute -top-2 -right-2 bg-yellow-300 text-black text-xs w-5 h-5 rounded-full flex items-center justify-center">
@@ -51,27 +52,27 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Login / Logout */}
+        {/* Auth */}
         {user ? (
           <button
-            className="px-3 py-1 rounded-md border border-gray-500 hover:bg-slate-800 hover:text-white transition"
+            className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-md border border-gray-500 hover:bg-slate-800 hover:text-white transition"
             onClick={handleLogout}
           >
             Logout
           </button>
         ) : (
           <button
-            className="px-3 py-1 rounded-md border border-gray-500 hover:bg-slate-800 hover:text-white transition"
+            className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-md border border-gray-500 hover:bg-slate-800 hover:text-white transition"
             onClick={handleLogin}
           >
             Login
           </button>
         )}
 
-        {/* Theme Switch */}
+        {/* Theme Toggle */}
         <button
           onClick={switchMode}
-          className="hidden sm:inline-block text-xl p-2 rounded-full bg-gray-500 hover:scale-110 transition"
+          className="text-lg sm:text-xl p-1 sm:p-2 rounded-full bg-gray-500 hover:scale-110 transition"
         >
           {darkMode ? (
             <BsFillMoonStarsFill className="text-slate-800" />
@@ -89,23 +90,21 @@ const Header = () => {
           {onlineStatus ? "Online" : "Offline"}
         </span>
 
-        {/* Sidebar Menu Button */}
+        {/* Menu */}
         <button
           onClick={toggleSidebar}
-          className="text-3xl text-emerald-600 hover:text-emerald-800"
+          className="text-2xl sm:text-3xl text-emerald-600 hover:text-emerald-800"
         >
           <HiMenuAlt3 />
         </button>
       </div>
 
-      {/* Sidebar Component */}
+      {/* Sidebar + Modal */}
       <Sidebar
         isOpen={sidebarOpen}
         onClose={toggleSidebar}
         cartWeight={cartWeight}
       />
-
-      {/* Login/Register Modal */}
       {showLoginModal && (
         <LoginRegister onClose={() => setShowLoginModal(false)} />
       )}
