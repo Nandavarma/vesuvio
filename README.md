@@ -99,8 +99,9 @@ npm run dev
 ```
 ## 🖼️ Screenshots
 
-
-Home Page	Restaurant Details	Order Confirmation
+| Home Page                        | Restaurant Details               | Order Confirmation              |
+|----------------------------------|----------------------------------|---------------------------------|
+| ![Home](./screenshots/Home.png) | ![Details](./screenshots/Menu.png) | ![Order](./screenshots/Cart.png) |
 
 📬 Contact
 If you have feedback, suggestions, or want to collaborate:
